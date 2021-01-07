@@ -9,6 +9,14 @@ Parameters:
   LatestAmiId:
     Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
     Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+  EnvironmentType:
+    Description: 'Provide environment name'
+    Default: dev
+    AllowedValues: 
+    - dev
+    - uat
+    - prod
+  
 
 Resources:
  Instance:
@@ -16,3 +24,7 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId
       InstanceType: !Ref InstanceType
+      Tags: 
+      - Key: Name
+        Value: !Join ['-', ['webserver', !Ref  EnvironmentType] ]
+      

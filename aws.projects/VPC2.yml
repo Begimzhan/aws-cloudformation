@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: 2010-09-09
+AWSemplateFormatVersion: 2010-09-09T
 Description: >-
   AWS CloudFormation Sample Template WordPress_Multi_AZ: WordPress is web
   software you can use to create a beautiful website or blog. This template
