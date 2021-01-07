@@ -17,7 +17,6 @@ Parameters:
     Default: t2.micro
     AllowedValues:
       - t1.micro
-      - t2.nano
       - t2.micro
       
     ConstraintDescription: must be a valid EC2 instance type.
